@@ -5,7 +5,8 @@
 ; Each makefile should begin by declaring the core version of Drupal that all
 ; projects should be compatible with.
 
-core = 7.22
+;core = 7.22
+core = 7.x
 
 ; API version
 ; ------------
@@ -20,8 +21,10 @@ api = 2
 ; alternative core projects like Pressflow. Note that makefiles included with
 ; install profiles *should not* include a core project.
 
-; Drupal 7.x. Requires the `core` property to be set to 7.x.
-projects[drupal][version] = 7.22
+; Einther specific or dev version
+;projects[drupal][version] = 7.22
+;projects[drupal][version] = 7.x
+projects[] = drupal
 
 ; Profiles
 
@@ -80,8 +83,8 @@ projects[views][subdir] = "contrib"
 ;projects[simplehtmldom][subdir] = "contrib"
 ;projects[touch_icons][type] = "module"
 ;projects[touch_icons][subdir] = "contrib"
-;projects[variable][type] = "module"
-;projects[variable][subdir] = "contrib"
+projects[variable][type] = "module"
+projects[variable][subdir] = "contrib"
 ;projects[memcache][type] = "module"
 ;projects[memcache][subdir] = "contrib"
 
